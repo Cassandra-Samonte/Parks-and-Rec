@@ -1,33 +1,38 @@
-import { useState } from 'react'
-import './App.css'
+import { useState, useEffect } from 'react';
+import Gallery from '../Gallery';
+import './styles.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [parks, setParks] = useState([]);
 
+  // Define function to fetch data from API
+  async function fetchData() {
+    console.log('API Key:', process.env.REACT_APP_NPS_API_KEY);
+    // Include the API key from .env
+    const apiKey = process.env.REACT_APP_NPS_API_KEY; 
+    const url = `https://developer.nps.gov/api/v1/parks?limit=500&start=0&api_key=${apiKey}`;
+
+    try {
+      const response = await fetch(url);
+      const { data } = await response.json();
+      setParks(data)
+    } catch (error) {
+      console.error("Failed to fetch parks:", error);
+    }
+  }
+
+  // Fetch data when component mounts
+  useEffect(() => {
+    fetchData();
+  }, []); 
+
+  // Create the HTML using JSX for the App component
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Parks & Rec</h1>
+      <Gallery parks={parks} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
