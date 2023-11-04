@@ -1,4 +1,4 @@
-![github](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/34f82f94-bb0c-4aa5-a385-c1124ad5c10c)
+![github](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/7ce2f4e6-a273-4b93-8798-7fd68e77f32e)
 
 # Parks & Rec
 Parks & Rec is a MERN Stack CRUD application leveraging the National Park Service (NPS) API to present comprehensive information on US National Parks.
@@ -35,10 +35,10 @@ Features enabled by Parks & Rec:
 - Engage with a community of conservationists.
 
 # Route Table
-<img width="908" alt="route" src="https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/c14777a9-4c45-4f6a-b630-f8a2280bc71f">
+<img width="908" alt="route" src="https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/84c5e618-42ef-49a2-99b6-4ff30599482e">
 
 # Wireframes
-![parks-wireframe](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/b9207678-40d5-457d-9671-b979421d5945)
+![parks-wireframe](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/232740c5-6efe-4400-9feb-cc4dcf5a72a3)
 
 # Minimum Viable Product (MVP) 
 The MVP of Parks & Rec will deliver a fully functional web application that:
