@@ -5,7 +5,7 @@ import './styles.css';
 
 function App() {
   const [parks, setParks] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1)
+  const [detailsData, setDetailsData] = useState({})
 
   // Define an async function to query the API & JSONify the response  
   async function getData(url) {
@@ -22,9 +22,12 @@ function App() {
   return (
     <>
       <h1>Parks & Rec</h1>
-      <Gallery parks={parks} refreshQueue={getData} />
-      {parks.length > 0 && <DetailsPage {...parks[0]} />}
-
+      <Gallery 
+            parks={parks}
+            refreshQueue={getData}
+            updateDetails={setDetailsData}
+        />
+      {detailsData.id && <DetailsPage {...detailsData} />}
     </>
   );
 }

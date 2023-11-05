@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Card from '../Card'
 
-export default function Gallery({ parks, refreshQueue }) {
+export default function Gallery({ parks, refreshQueue, updateDetails }) {
     // Keep track of what gallery page the user is viewing
     const [currentPage, setCurrentPage] = useState(1)
 
@@ -25,11 +25,11 @@ export default function Gallery({ parks, refreshQueue }) {
         const nextPage = currentPage + 1
         galleryContent = parks
             .slice(currentPage * 20, nextPage * 20) // get the 20 images of the array we want to see
-            .map((park, i) => <Card key={i} parkData={park} />) // map over the 20 images and render them in Card components
+            .map((park, i) => <Card key={i} parkData={park} updateDetails={updateDetails} />) // map over the 20 images and render them in Card components
     } else if (parks.length > 0 && currentPage === 1) {
         galleryContent = parks
             .slice(0, 20) // get the first 20 parks when on the first page
-            .map((park, i) => <Card key={i} parkData={park} />)
+            .map((park, i) => <Card key={i} parkData={park} updateDetails={updateDetails} />)
     }
 
     return (

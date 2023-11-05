@@ -1,4 +1,4 @@
-export default function Card({ parkData }) {
+export default function Card({ parkData, updateDetails }) {
 
     // Declare variable
     let firstImage; 
@@ -18,7 +18,7 @@ export default function Card({ parkData }) {
 
     return (
         <>
-            <figure>
+            <figure onClick={() => updateDetails(parkData) }>
                 <figcaption>
                     <h1>{parkData.fullName}</h1>
                     <p>{parkData.description}</p>
