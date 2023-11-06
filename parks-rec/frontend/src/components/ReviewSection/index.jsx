@@ -73,21 +73,21 @@ export default function reviewSection({ parkId }) {
     }
 
     return (
-        <div className='review-section bg-gray-300 rounded-lg p-4 pb-10 mt-4 space-y-4 relative'>
+        <div>
             <h1 className='text-xl font-bold'>Viewer Insights</h1>
             <button
                 onClick={toggleCreateForm}
-                className="top-0 right-5 absolute text-white hover:bg-green-800 font-bold py-2 px-4 bg-green-900 rounded cursor-pointer mr-2"
+                className=""
             >
                 {btnText}
             </button>
             {
                 showCreateForm && <form
                     onSubmit={handleSubmit}
-                    className="bg-gray-100 rounded-lg p-4 my-4 border-gray-700 border-2 w-[80vw] mx-auto text-right">
+                    className="">
                     <input
                         name="name"
-                        className="px-2 py-1 w-full bg-gray-100"
+                        className=""
                         placeholder="Your name"
                         value={createFormData.name}
                         onChange={handleInputChange}
@@ -95,14 +95,14 @@ export default function reviewSection({ parkId }) {
                     <br />
                     <textarea
                         name="content"
-                        className="p-2 my-2 h-[100px] w-full bg-gray-100"
+                        className=""
                         placeholder="Share your thoughts!"
                         value={createFormData.content}
                         onChange={handleInputChange}
                     />
                     <button
                         type="submit"
-                        className="text-white hover:bg-gray-800 font-bold py-2 px-4 bg-gray-700 rounded cursor-pointer mr-2">
+                        className="">
                         Post
                     </button>
                 </form>
