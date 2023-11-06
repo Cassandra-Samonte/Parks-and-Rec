@@ -34,8 +34,8 @@ export default function Gallery({ parks, refreshQueue, updateDetails, url }) {
 
     return (
         <>
-      <div className="flex justify-center">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1 pt-20 pb-10">
+            <div className="flex justify-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1 pt-20 pb-10">
                 {galleryContent}
             </div>
             </div>
