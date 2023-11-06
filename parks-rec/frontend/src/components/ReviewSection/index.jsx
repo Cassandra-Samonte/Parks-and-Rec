@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { postReview, getReviews } from "../../../utils/backend"
-import review from "../review"
+import Review from "../Review"
 
 export default function reviewSection({ parkId }) {
     // Save reviews queried from the database in state
@@ -58,7 +58,7 @@ export default function reviewSection({ parkId }) {
     let reviewElements = [<p key='0' className='text-center'>No reviews yet. Be the first to review!</p>]
     if (reviews.length > 0) {
         reviewElements = reviews.map(review => {
-            return <review
+            return <Review
                 key={review._id}
                 data={review}
                 refreshReviews={refreshReviews}
