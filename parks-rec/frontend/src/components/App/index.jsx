@@ -24,17 +24,19 @@ function App() {
       getData('https://developer.nps.gov/api/v1/parks?limit=50&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
   }, [])
 
-  // Getting NEWS data from API
-    async function getNewsData(url) {
-      const res = await fetch(url);
-      const { data } = await res.json();
-      const newsWithImages = data.filter(article => article.image && article.image.url);
-      const limitNews = newsWithImages.slice(0, 8); 
-      setNews(limitNews);
-    }
+// Getting NEWS data from API
+  async function getNewsData(url) {
+    const res = await fetch(url);          
+    const { data } = await res.json();    
+    const newsWithImages = data.filter(
+      article => article.image && article.image.url 
+    );
+    setNews(newsWithImages); 
+  }
+
     // Query the API on component mount, and get 50 Parks.
     useEffect(() => {
-      getNewsData('https://developer.nps.gov/api/v1/newsreleases/?limit=8&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
+      getNewsData('https://developer.nps.gov/api/v1/newsreleases/?api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
     }, [])
 
 
