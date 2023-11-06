@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, Link } from "react-router-dom";
+import whiteLogo from '../../assets/logowhite.png'; 
 import HomePage from '../HomePage'
 import ParksPage from '../ParksPage'
 import DetailsPage from '../DetailsPage'
@@ -36,7 +37,7 @@ function App() {
 
     // Query the API on component mount, and get 50 Parks.
     useEffect(() => {
-      getNewsData('https://developer.nps.gov/api/v1/newsreleases/?api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
+      getNewsData('https://developer.nps.gov/api/v1/newsreleases/?limit=8&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
     }, [])
 
 
@@ -46,9 +47,10 @@ function App() {
       <nav className="absolute top-0 left-0 w-full bg-transparent py-4 px-6 flex justify-between items-center z-10">
 
       <div className="flex items-center"> 
-        <Link to="/">
+      <Link to="/">
+          <img src={whiteLogo} alt="Parks and Rec Logo" className="w-20 h-21" />
+      </Link>
           <h2 className="text-lg font-bold text-white px-3">Parks & Rec</h2>
-        </Link>
       </div>
 
       <div className="flex items-center">
