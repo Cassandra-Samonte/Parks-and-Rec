@@ -18,7 +18,7 @@ export default function Gallery({ parks, refreshQueue, updateDetails, url }) {
 
 
     // The default value of gallery content. What we see before the app finsihes querying the API
-    let galleryContent = <p>National Parks are loading...</p>
+    let galleryContent = ""
 
     // Conditionally update the gallery content depending on the current page
     if (parks.length > 0 && currentPage > 1) {

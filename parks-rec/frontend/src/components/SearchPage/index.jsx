@@ -1,5 +1,7 @@
 import { useState } from "react"
 import Gallery from "../Gallery"
+import searchVideo from '../../assets/search.mp4'; 
+
 
 export default function SearchPage(props) {
     // Store search term and API data here
@@ -26,10 +28,16 @@ export default function SearchPage(props) {
     }
 
     return (
-        <div className="search-page p-10">
-            <form onSubmit={handleQuerySubmit} className="mt-4 text-center">
-                <label htmlFor="search" className="block font-medium mb-1">
-                    <h1 className="text-3xl font-bold">Search National Parks</h1>
+        <>
+        <div className="relative overflow-hidden">
+        <video autoPlay loop playsInline muted className="w-full" style={{ height: '100vh', objectFit: 'cover' }}>
+            <source src={searchVideo} type="video/mp4" />
+        </video>
+        {/* Overlay content */}
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+        <form onSubmit={handleQuerySubmit} className="mt-4 text-center">
+                <label htmlFor="search" >
+                    <h1 className="text-white text-4xl font-bold">Search National Parks</h1>
                 </label>
                 <br />
                 <input
@@ -46,10 +54,6 @@ export default function SearchPage(props) {
                     Search
                 </button>
             </form>
-
-            {/* Display the search query */}
-            <div className="text-center mt-4">
-                <p className="text-lg font-medium">Search Results for: {query}</p>
             </div>
 
             <Gallery
@@ -58,6 +62,10 @@ export default function SearchPage(props) {
                 url={`https://developer.nps.gov/api/v1/parks?limit=50&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg&skip=${queryResults.length}`}
                 updateDetails={props.setDetailsData}
             />
+                    
         </div>
+
+       
+    </>
     )
 }

@@ -1,10 +1,19 @@
 import Gallery from '../Gallery'
+import browseVideo from '../../assets/browse.mp4'; 
+
 
 export default function ParksPage(props) {
     return (
         <>
-            <h1>Browse National Parks</h1>
-
+            <div className="relative overflow-hidden">
+            <video autoPlay loop playsInline muted className="w-full" style={{ height: '90vh', objectFit: 'cover' }}>
+            <source src={browseVideo} type="video/mp4" />
+            </video>
+            {/* Overlay content */}
+            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <h1 className="text-white text-4xl font-bold">discover your next adventure</h1>
+            </div>
+            </div>
             <Gallery
                 parks={props.parks}
                 refreshQueue={props.getData}
