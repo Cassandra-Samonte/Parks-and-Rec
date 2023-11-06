@@ -25,12 +25,11 @@ export default function Card({ parkData, updateDetails }) {
                 onClick={() => { updateDetails(parkData) }}
             >                
                 <figcaption>
-                    <h1>{parkData.fullName}</h1>
-                    <p>{parkData.description}</p>
-                    <div>
-                        {firstImage}
-                    </div>
-                </figcaption>
+                        <h1>{parkData.fullName}</h1>
+                        <div>
+                            {firstImage}
+                        </div>
+                    </figcaption>
             </Link>
         </>
     );

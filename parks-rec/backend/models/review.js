@@ -7,7 +7,7 @@ const reviewSchema = new mongoose.Schema(
         name: { type: String, required: true },
         content: { type: String, required: true },
         title: { type: String, maxLength: 30 },
-        parkId: { type: Number, required: true }
+        parkId: { type: String, required: true }
     },
     { timestamps: true }
 );

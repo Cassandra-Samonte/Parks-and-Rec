@@ -3,7 +3,7 @@ import Gallery from '../Gallery'
 export default function HomePage(props) {
     return (
         <>
-            <h1>Browse National Parks Below!</h1>
+            <h1>Browse National Parks</h1>
 
             <Gallery
                 parks={props.parks}
