@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Card({ parkData, updateDetails }) {
 
     // Declare variable
@@ -18,7 +20,10 @@ export default function Card({ parkData, updateDetails }) {
 
     return (
         <>
-            <figure onClick={() => updateDetails(parkData) }>
+            <Link
+                to={"/details"}
+                onClick={() => { updateDetails(parkData) }}
+            >                
                 <figcaption>
                     <h1>{parkData.fullName}</h1>
                     <p>{parkData.description}</p>
@@ -26,7 +31,7 @@ export default function Card({ parkData, updateDetails }) {
                         {firstImage}
                     </div>
                 </figcaption>
-            </figure>
+            </Link>
         </>
     );
 }
