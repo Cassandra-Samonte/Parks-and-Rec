@@ -6,6 +6,7 @@ export default function Details({ images, fullName, description, weatherInfo, id
     return (
             <>
                 <div>
+                    
                     <div className="relative overflow-hidden">
                         {images && images.length > 0 && (
                             <img
@@ -21,8 +22,10 @@ export default function Details({ images, fullName, description, weatherInfo, id
                             <h1 className="text-white text-4xl font-bold">{fullName}</h1>
                         </div>
                     </div>
+
                     <p>{description}</p>
                     <p>{weatherInfo}</p>
+
                 </div>
                 {/* Conditionally render images based on their existence */}
                 {/* {images && images.length > 0 && <img src={images[0].url} alt={images[0].altText} />}

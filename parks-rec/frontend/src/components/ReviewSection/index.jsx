@@ -74,7 +74,7 @@ export default function reviewSection({ parkId }) {
 
     return (
         <div>
-            <h1 className='text-xl font-bold'>Viewer Insights</h1>
+            <h1 className='text-xl font-bold'>Park Reviews</h1>
             <button
                 onClick={toggleCreateForm}
                 className=""
