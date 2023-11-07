@@ -1,0 +1,6 @@
+#bg-image {
+    background-image: url('assets/background.png');
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    height: 90vh; /* Set a height */
+  }

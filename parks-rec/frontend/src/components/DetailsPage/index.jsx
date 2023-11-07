@@ -1,4 +1,6 @@
 import ReviewSection from '../ReviewSection'
+import './styles.css';
+import backgroundImage from '../../assets/background.png';
 
 
 export default function Details({ images, fullName, description, weatherInfo, id }) {
@@ -6,7 +8,8 @@ export default function Details({ images, fullName, description, weatherInfo, id
     return (
             <>
                 <div>
-                    
+
+
                     <div className="relative overflow-hidden">
                         {images && images.length > 0 && (
                             <img
@@ -35,6 +38,7 @@ export default function Details({ images, fullName, description, weatherInfo, id
                 <div className="bg-white p-4 rounded shadow-md w-[100vw]">
                     <ReviewSection parkId={id} />
                 </div>
+            
             </>
     )
 }

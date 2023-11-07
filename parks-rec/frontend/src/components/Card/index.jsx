@@ -22,7 +22,7 @@ export default function Card({ parkData, updateDetails }) {
     return (
         <>
             <Link to={"/details"} onClick={() => { updateDetails(parkData) }}>  
-                <figure className="relative group border-2 border-black">              
+                <figure className="w-140 h-80 relative group shadow-lg bg-white p-3 hover:scale-105 bg-opacity-30">              
                         <div>
                             {firstImage}
                         </div>
