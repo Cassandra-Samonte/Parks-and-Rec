@@ -1,6 +1,5 @@
 import ReviewSection from '../ReviewSection'
 import './styles.css';
-import backgroundImage from '../../assets/background.png';
 
 
 export default function Details({ images, fullName, description, weatherInfo, id }) {
