@@ -17,21 +17,21 @@ export default function HomePage({ news }) {
 
 
         {/* News Articles */}
-        <h1>Newsreleases</h1>
+        <h1 className="text-left font-semibold text-lg pt-8">Newsreleases</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-            {news.filter(article => article.image && article.image.url).slice(0, 4).map((article) => (
-                <div key={article.id} className="block bg-white overflow-hidden">
-                    <div className="w-full h-48">
-                        <img src={article.image.url} alt={article.image.altText || 'News image'} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="p-4">
-                        <h3 className="font-semibold text-lg mb-2">{article.title}</h3>
-                        <button onClick={() => window.open(article.url, '_blank', 'noopener noreferrer')} >
-                            Read More
-                        </button>
-                    </div>
+        {news.filter(article => article.image && article.image.url).slice(0, 4).map((article) => (
+            <div key={article.id} className="block bg-white overflow-hidden">
+                <div className="w-full h-48">
+                    <img src={article.image.url} alt={article.image.altText || 'News image'} className="w-full h-full object-cover" />
                 </div>
-            ))}
+                <div className="p-4">
+                    <h3 className="font-semibold text-lg mb-2">{article.title}</h3>
+                    <button onClick={() => window.open(article.url, '_blank', 'noopener noreferrer')} >
+                        Read More
+                    </button>
+                </div>
+            </div>
+        ))}
         </div>
 
       </>
