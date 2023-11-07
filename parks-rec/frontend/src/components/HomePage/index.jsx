@@ -19,7 +19,7 @@ export default function HomePage({ news }) {
         {/* News Articles */}
         <div className="p-10">
             <h1 className="text-left font-semibold text-lg pt-8">Latest News</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                 {news.filter(article => article.image && article.image.url).slice(0, 4).map((article) => (
                     <div key={article.id} className="block bg-white overflow-hidden">
                         <div className="w-full h-2/4 relative group shadow-lg bg-white p-4 bg-opacity-30">
