@@ -47,9 +47,9 @@ function App() {
       <nav className="absolute top-0 left-0 w-full bg-transparent py-4 px-6 flex justify-between items-center z-10">
 
       <div className="flex items-center"> 
-      <Link to="/">
-          <img src={whiteLogo} alt="Parks and Rec Logo" className="w-20 h-21" />
-      </Link>
+        <Link to="/">
+            <img src={whiteLogo} alt="Parks and Rec Logo" className="w-15 h-16" />
+        </Link>
           <h2 className="text-lg font-bold text-white px-3">Parks & Rec</h2>
       </div>
 

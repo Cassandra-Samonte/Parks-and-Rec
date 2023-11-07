@@ -11,7 +11,7 @@ export default function ParksPage(props) {
             </video>
             {/* Overlay content */}
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-            <h1 className="text-white text-4xl font-bold">discover your next adventure</h1>
+            <h1 className="text-white text-4xl font-bold">Discover Your Next Adventure</h1>
             </div>
             </div>
             <Gallery
