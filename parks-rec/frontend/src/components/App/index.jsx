@@ -37,7 +37,7 @@ function App() {
 
     // Query the API on component mount, and get 50 Parks.
     useEffect(() => {
-      getNewsData('https://developer.nps.gov/api/v1/newsreleases/?limit=8&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
+      getNewsData('https://developer.nps.gov/api/v1/newsreleases/?limit=50&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
     }, [])
 
 

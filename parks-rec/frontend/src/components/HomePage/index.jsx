@@ -17,25 +17,30 @@ export default function HomePage({ news }) {
 
 
         {/* News Articles */}
-        <div className="p-10">
+        <div className="pt-6 px-20">
             <h1 className="text-left font-semibold text-lg pt-8">Latest News</h1>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                {news.filter(article => article.image && article.image.url).slice(0, 4).map((article) => (
-                    <div key={article.id} className="block bg-white overflow-hidden">
-                        <div className="w-full h-2/4 relative group shadow-lg bg-white p-4 bg-opacity-30">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+                {news.slice(0, 8).map((article) => (
+                    <div key={article.id} className="flex flex-col bg-white overflow-hidden shadow-lg">
+                        <div className="w-full h-56 bg-white p-4 shadow-lg">
                             <img src={article.image.url} alt={article.image.altText || 'News image'} className="w-full h-full object-cover" />
-    
-                            <div className="p-4">
-                                <h3 className="font-semibold text-lg mb-2">{article.title}</h3>
-                                <button onClick={() => window.open(article.url, '_blank', 'noopener noreferrer')} >
-                                    Read More
-                                </button>
-                            </div>
+                        </div>
+                        <div className="p-4 flex-grow">
+                            <h3 className="font-semibold text-lg mb-2">{article.title}</h3>
+                            <button onClick={() => window.open(article.url, '_blank', 'noopener noreferrer')} className="mt-auto">
+                                Read More
+                            </button>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
+
+
+        <div className="pt-6 px-20">
+            <h1 className="text-left font-semibold text-lg pt-8">Alerts</h1>
+        </div>
+
       </>
     );
 }
