@@ -41,8 +41,8 @@ export default function Gallery({ parks, refreshQueue, updateDetails, url }) {
             </div>
 
             <div className='page-controls'>
-                <button onClick={getPrevPage}>Previous Page</button>
-                <button onClick={getNextPage}>Next Page</button>
+                <button className="bg-gray-300" onClick={getPrevPage}>Previous Page</button>
+                <button className="bg-gray-300" onClick={getNextPage}>Next Page</button>
             </div>
         </>
     );

@@ -42,17 +42,14 @@ export default function AuthFormPage() {
                     <div className="flex items-center justify-center h-[90vh]">
                         <form 
                             onSubmit={handleSubmit} 
-                            className="text-center mb-8 bg-white bg-opacity-50 rounded-lg p-10 space-y-6 w-full max-w-md"
+                            className="text-center mb-8 bg-white bg-opacity-50 rounded-lg p-10 space-y-6 w-full max-w-md shadow-lg"
                         >
-                            <h2 className="text-3xl font-bold text-gray-800 mb-8">
+                            <h2 className="text-3xl font-bold text-white mb-8">
                                 {actionText}
                             </h2>
                             <div>
-                                <label className="block text-gray-800 font-bold mb-2" htmlFor="email">
-                                    Email
-                                </label>
                                 <input
-                                    className="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:border-gray-500"
+                                    className="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:border-gray-500 "
                                     id="email"
                                     name="email"
                                     type="email"
@@ -63,9 +60,6 @@ export default function AuthFormPage() {
                                 />
                             </div>
                             <div>
-                                <label className="block text-gray-800 font-bold mb-2" htmlFor="password">
-                                    Password
-                                </label>
                                 <input
                                     className="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:border-gray-500"
                                     id="password"

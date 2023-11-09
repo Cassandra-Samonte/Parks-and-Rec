@@ -12,12 +12,12 @@ export default function Details({
     <p key={index} className="text-gray-800">Email: {email.emailAddress}</p>
   )) : <p className="text-gray-500">No email information available</p>;
 
-  let entranceFeesElement = entranceFees.length > 0 ? entranceFees.map((fee, index) => (
-    <div key={index} className="mb-4">
-      <p className="text-gray-800 font-bold">{fee.title}: ${fee.cost}</p>
-      <p className="text-gray-600">{fee.description}</p>
-    </div>
-  )) : <p className="text-gray-500">No entrance fee information available</p>;
+  // let entranceFeesElement = entranceFees.length > 0 ? entranceFees.map((fee, index) => (
+  //   <div key={index} className="mb-4">
+  //     <p className="text-gray-800 font-bold">{fee.title}: ${fee.cost}</p>
+  //     <p className="text-gray-600">{fee.description}</p>
+  //   </div>
+  // )) : <p className="text-gray-500">No entrance fee information available</p>;
 
   return (
     <>

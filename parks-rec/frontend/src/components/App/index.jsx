@@ -11,7 +11,7 @@ import './styles.css';
 function App() {
   const [parks, setParks] = useState([]);
   const [detailsData, setDetailsData] = useState({})
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useState([]);  
 
 // Getting PARK data from API
   // Define an async function to query the API & JSONify the response  
