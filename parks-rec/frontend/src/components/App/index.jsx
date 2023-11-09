@@ -58,12 +58,12 @@ function App() {
          
           <div className="flex items-center">
             <Link to="/parks">
-              <button className="bg-white bg-opacity-50 text-gray-700 rounded-md py-2 px-2 ml-2 focus:outline-none min-w-max">
+              <button className="bg-white bg-opacity-50 text-white rounded-md py-2 px-2 ml-2 focus:outline-none min-w-max">
                 US National Parks
               </button>
             </Link>
             <Link to="/search">
-              <button className="bg-white bg-opacity-50 text-gray-700 rounded-md py-2 px-4 ml-2 focus:outline-none">
+              <button className="bg-white bg-opacity-50 text-white rounded-md py-2 px-4 ml-2 focus:outline-none">
                 Search
               </button>
             </Link>
