@@ -5,6 +5,7 @@ import HomePage from '../HomePage'
 import ParksPage from '../ParksPage'
 import DetailsPage from '../DetailsPage'
 import SearchPage from '../SearchPage'
+import AuthFormPage from '../AuthFormPage'
 import './styles.css';
 
 function App() {
@@ -40,7 +41,6 @@ function App() {
       getNewsData('https://developer.nps.gov/api/v1/newsreleases/?limit=50&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
     }, [])
 
-
   return (
     <>
       {/* Nav Bar */}
@@ -67,6 +67,16 @@ function App() {
                 Search
               </button>
             </Link>
+            <Link to="/auth/signup">
+              <button className="bg-white bg-opacity-50 text-white rounded-md py-2 px-4 ml-2 focus:outline-none min-w-max">
+                Sign Up
+              </button>              
+            </Link>
+            <Link to="/auth/login">
+              <button className="bg-white bg-opacity-50 text-white rounded-md py-2 px-4 ml-2 focus:outline-none min-w-max">
+                Log In
+              </button>  
+            </Link>
         </div>
 
       </nav>
@@ -83,9 +93,10 @@ function App() {
         <Route path="/" element={ <HomePage news={news} />} />
         <Route path="/search" element={<SearchPage setDetailsData={setDetailsData} />} />
         <Route path="/details" element={<DetailsPage {...detailsData} />} />
+        <Route path="/auth/:formType" element={<AuthFormPage />} />
       </Routes>
       </>
-  );
+  )
 }
 
 export default App;

@@ -45,5 +45,5 @@ export default function Gallery({ parks, refreshQueue, updateDetails, url }) {
                 <button onClick={getNextPage}>Next Page</button>
             </div>
         </>
-    )
+    );
 }

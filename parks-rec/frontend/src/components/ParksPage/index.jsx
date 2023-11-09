@@ -23,5 +23,5 @@ export default function ParksPage(props) {
                 url={`https://developer.nps.gov/api/v1/parks?limit=500&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg&skip=${props.parks.length}`}
             />    
         </>
-    )
+    );
 }

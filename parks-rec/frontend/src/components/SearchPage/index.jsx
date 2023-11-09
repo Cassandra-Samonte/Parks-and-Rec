@@ -28,14 +28,13 @@ export default function SearchPage(props) {
 
     return (
             <>
-            {/* Container for video, search bar, and Gallery */}
             <div className="relative h-screen overflow-auto"> 
                 <video autoPlay loop playsInline muted className="absolute w-full h-full object-cover">
                     <source src={searchVideo} type="video/mp4" />
                 </video>
 
                 {/* Overlay content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-4"> 
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-4"> 
                     <form onSubmit={handleQuerySubmit} className="text-center mb-8 bg-white bg-opacity-50 rounded-lg p-10"> 
                         <label htmlFor="search" className="block text-4xl font-bold text-white mb-4">Search National Parks</label> 
                         <input
