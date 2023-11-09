@@ -1,13 +1,17 @@
 // Require the Mongoose package
 const mongoose = require('mongoose');
 
-// Create a schema to define the properties of the pets collection
+// Create a schema to define the properties of the review collection
 const reviewSchema = new mongoose.Schema(
     {
         name: { type: String, required: true },
         content: { type: String, required: true },
-        title: { type: String, maxLength: 30 },
-        parkId: { type: String, required: true }
+        parkId: { type: String, required: true },
+        userId: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: 'User',
+        },
     },
     { timestamps: true }
 );
