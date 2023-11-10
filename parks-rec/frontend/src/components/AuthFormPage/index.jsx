@@ -3,11 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { signUp, logIn } from '../../../utils/backend';
 import searchVideo from '../../assets/search.mp4'; 
 
-
-export default function AuthFormPage() {
+export default function AuthFormPage({ setIsLoggedIn }) {
     const navigate = useNavigate();
     const { formType } = useParams();
-
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -19,18 +17,28 @@ export default function AuthFormPage() {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
 
-    async function handleSubmit(event) {
+    const handleSubmit = async (event) => {
         event.preventDefault();
+        let response;
+        
         if (formType === 'login') {
-            const response = await logIn(formData);
-            // Perform operations with response if needed
+            response = await logIn(formData);
         } else {
-            const response = await signUp(formData);
-            // Perform operations with response if needed
+            response = await signUp(formData);
         }
-        // Navigate to homepage or other page based on successful response
-        navigate('/');
-    }
+        // Check if response includes a token
+        if (response && response.token) {
+            // Save JWT token in localStorage
+            localStorage.setItem('userToken', response.token);
+            // Update login state
+            setIsLoggedIn(true);
+            // Navigate to homepage
+            navigate('/');
+        } else {
+            // Handle failure (e.g., display an error message)
+            console.error('Login/Signup failed:', response);
+        }
+    };
 
     return (
         <>
@@ -83,5 +91,5 @@ export default function AuthFormPage() {
                 </div>
             </div>
         </>
-    );    
+    );
 }

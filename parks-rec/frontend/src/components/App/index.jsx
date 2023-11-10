@@ -12,6 +12,7 @@ function App() {
   const [parks, setParks] = useState([]);
   const [detailsData, setDetailsData] = useState({})
   const [news, setNews] = useState([]);  
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 // Getting PARK data from API
   // Define an async function to query the API & JSONify the response  
@@ -41,6 +42,21 @@ function App() {
       getNewsData('https://developer.nps.gov/api/v1/newsreleases/?limit=50&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
     }, [])
 
+    // Check for a user token when the app loads
+    useEffect(() => {
+      const token = localStorage.getItem('userToken');
+      if (token) {
+        setIsLoggedIn(true);
+      }
+    }, []);
+
+    // handleLogout function clears token from localStorage and updates the isLoggedIn state
+    const handleLogout = () => {
+      localStorage.removeItem('userToken');
+      setIsLoggedIn(false);
+    };
+
+
   return (
     <>
       {/* Nav Bar */}
@@ -67,19 +83,32 @@ function App() {
                 Search
               </button>
             </Link>
-            <Link to="/auth/signup">
-              <button className="bg-white bg-opacity-50 text-white rounded-md py-2 px-4 ml-2 focus:outline-none min-w-max">
-                Sign Up
-              </button>              
-            </Link>
-            <Link to="/auth/login">
-              <button className="bg-white bg-opacity-50 text-white rounded-md py-2 px-4 ml-2 focus:outline-none min-w-max">
-                Log In
-              </button>  
-            </Link>
-        </div>
 
-      </nav>
+          {/* Render the Sign Up/Login or Logout button based on isLoggedIn */}
+            {!isLoggedIn ? (
+              <>
+                {/* Show Sign Up only if not logged in */}
+                <Link to="/auth/signup">
+                  <button className="bg-white bg-opacity-50 text-white rounded-md py-2 px-4 ml-2 focus:outline-none min-w-max">
+                    Sign Up
+                  </button>              
+                </Link>
+                {/* Show Log In only if not logged in */}
+                <Link to="/auth/login">
+                  <button className="bg-white bg-opacity-50 text-white rounded-md py-2 px-4 ml-2 focus:outline-none min-w-max">
+                    Log In
+                  </button>
+                </Link>
+              </>
+            ) : (
+              // Show Log Out if logged in
+              <button onClick={handleLogout} className="bg-white bg-opacity-50 text-white rounded-md py-2 px-4 ml-2 focus:outline-none min-w-max">
+                Log Out
+              </button>
+            )}
+          </div>
+
+        </nav>
 
       {/* Routes */}
       <Routes>        
@@ -93,7 +122,7 @@ function App() {
         <Route path="/" element={ <HomePage news={news} />} />
         <Route path="/search" element={<SearchPage setDetailsData={setDetailsData} />} />
         <Route path="/details" element={<DetailsPage {...detailsData} />} />
-        <Route path="/auth/:formType" element={<AuthFormPage />} />
+        <Route path="/auth/:formType" element={<AuthFormPage setIsLoggedIn={setIsLoggedIn} />} />
       </Routes>
       </>
   )
