@@ -1,4 +1,5 @@
 import ReviewSection from '../ReviewSection';
+import FooterSection from '../FooterSection'
 import './styles.css';
 
 export default function Details({
@@ -158,8 +159,15 @@ export default function Details({
           </div>
         </div>
 
+        {/* Review Section */}
+        <div className="p-10">
+          <div className="bg-white p-4 rounded shadow-lg w-full max-w-screen-lg mx-auto">
+            <ReviewSection parkId={id} />
+          </div>
+        </div>
+
         {/* Map Section */}
-        <div className="px-10 my-4">
+        <div className="px-10 my-4 pb-10">
           <div className="bg-white p-4 rounded shadow-md">
             <iframe
               src={mapUrl}
@@ -173,11 +181,8 @@ export default function Details({
           </div>
         </div>
 
+        <FooterSection />
 
-        {/* Review Section */}
-        <div className="bg-white p-4 rounded shadow-lg w-full max-w-screen-lg mx-auto">
-          <ReviewSection parkId={id} />
-        </div>
       </>
   );
 }

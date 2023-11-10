@@ -1,4 +1,5 @@
 import React from 'react';
+import FooterSection from '../FooterSection'
 import homeVideo from '../../assets/video.mp4'; 
 
 export default function HomePage({ news }) {
@@ -17,7 +18,7 @@ export default function HomePage({ news }) {
 
 
         {/* News Articles */}
-        <div className="pt-6 px-20">
+        <div className="pt-6 px-20 pb-20">
             <h1 className="text-left font-semibold text-lg pt-8">Latest News</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
                 {news.slice(0, 8).map((article) => (
@@ -36,11 +37,11 @@ export default function HomePage({ news }) {
             </div>
         </div>
 
-
-        <div className="pt-6 px-20">
+        {/* <div className="pt-6 px-20">
             <h1 className="text-left font-semibold text-lg pt-8">Alerts</h1>
-        </div>
+        </div> */}
 
+        <FooterSection />
       </>
     );
 }

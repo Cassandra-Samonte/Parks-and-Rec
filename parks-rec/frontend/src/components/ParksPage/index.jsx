@@ -1,4 +1,5 @@
 import Gallery from '../Gallery'
+import FooterSection from '../FooterSection'
 import browseVideo from '../../assets/browse.mp4'; 
 import './styles.css';
 
@@ -22,6 +23,7 @@ export default function ParksPage(props) {
                 updateDetails={props.setDetailsData}
                 url={`https://developer.nps.gov/api/v1/parks?limit=500&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg&skip=${props.parks.length}`}
             />    
+            <FooterSection />
         </>
     );
 }

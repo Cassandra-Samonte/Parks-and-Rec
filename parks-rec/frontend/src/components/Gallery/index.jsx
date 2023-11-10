@@ -34,13 +34,13 @@ export default function Gallery({ parks, refreshQueue, updateDetails, url }) {
 
     return (
         <>
-            <div className="flex justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 pt-10 pb-10">
+            <div className="flex justify-center p-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
                 {galleryContent}
             </div>
             </div>
 
-            <div className='page-controls'>
+            <div className="pb-16">
                 <button className="bg-gray-300" onClick={getPrevPage}>Previous Page</button>
                 <button className="bg-gray-300" onClick={getNextPage}>Next Page</button>
             </div>

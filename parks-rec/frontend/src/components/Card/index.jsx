@@ -8,7 +8,7 @@ export default function Card({ parkData, updateDetails }) {
     if (parkData.images && parkData.images[0]) {
         // If an image exists, assign the first image to <img> tag and display first image
         firstImage = <img 
-                className="w-80 h-60 m-1 mt-1 object-cover group-hover:opacity-50 transition-opacity duration-300 shadow-lg"
+                className="w-80 h-60 m-1 mt-1 object-cover group-hover:opacity-50 transition-opacity duration-300 shadow-lg p-2"
                 src={parkData.images[0].url} 
                 alt={parkData.images[0].altText} 
                 title={parkData.images[0].title} 
