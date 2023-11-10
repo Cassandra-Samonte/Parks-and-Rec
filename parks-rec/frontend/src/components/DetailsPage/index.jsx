@@ -71,7 +71,7 @@ export default function Details({
 
         {/* Content Grid */}
         <div className="px-10 py-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column Content */}
             <div>
               <div className="px-10 my-4">
