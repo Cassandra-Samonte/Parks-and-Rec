@@ -48,7 +48,10 @@ The MVP of Parks & Rec will deliver a fully functional web application that:
 - Displays data from the NPS API in a user-friendly format.
 - Includes a model that allows users to share their experiences, rate parks and trails, and provide tips for fellow visitors.
 
-# Final Project
+# Deployed App
+<img width="1336" alt="app1" src="https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/0fdaf7be-27a4-40e9-8879-bbf6ce883c71">
+<img width="1336" alt="app2" src="https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/9f8be390-f313-4aa1-aa43-dfac51326490">
+<img width="1336" alt="app3" src="https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/443f4ee3-2cc7-4713-8958-270b7b4406a1">
 
 # Technologies Used
 MongoDB
@@ -56,6 +59,7 @@ Express.js
 React
 Node.js
 National Park Service API
+Tailwind CSS
 
 # Stretch Goals
 ## Secure Login:
