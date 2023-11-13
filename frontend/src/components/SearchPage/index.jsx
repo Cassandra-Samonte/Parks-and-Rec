@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Gallery from "../Gallery"
-// import searchVideo from '../../assets/search.mp4'; 
+import searchVideo from '../../assets/search.mp4'; 
 
 
 export default function SearchPage(props) {
@@ -30,7 +30,7 @@ export default function SearchPage(props) {
             <>
             <div className="relative h-screen overflow-auto"> 
                 <video autoPlay loop playsInline muted className="absolute w-full h-full object-cover">
-                    <source src="https://drive.google.com/file/d/10MJkEa5UWy1HVj2CyxAPJmlm3CXaeei0/view?usp=sharing" type="video/mp4" />
+                    <source src={searchVideo} type="video/mp4" />
                 </video>
 
                 {/* Overlay content */}
