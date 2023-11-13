@@ -11,25 +11,24 @@ This application will serve as the capstone project showcasing proficiency in th
 # Installation Instructions
 To set up and run Parks & Rec locally on your machine, please follow these steps:
 
-Step 1: Clone the Repository
+## Step 1: Clone the Repository
 First, clone the Parks & Rec repository from GitHub to your local machine. You can do this by running the following command in your terminal:
 	git clone https://github.com/Cassandra-Samonte/Parks-and-Rec.git
-Step 2: Install Dependencies
+## Step 2: Install Dependencies
 Navigate to the cloned repository's directory and install the necessary dependencies for the project. Run:
 	cd Parks-and-Rec
 	npm install
-Step 3: Set Up Environment Variables
+## Step 3: Set Up Environment Variables
 Create a .env file in the root directory of the project. You will need to set the following environment variables:
 * MONGO_URI - your MongoDB connection string
 * API_KEY - your National Park Service API key
 * JWT_SECRET_KEY - your JWS secret key
-Step 4: Start the Application
+## Step 4: Start the Application
 Once all dependencies are installed and environment variables are set, you can start the application by running:
 	npm start
 This will start the server and the React application. You should see a message indicating that the server is running on a specific port (usually port 3000).
-Step 5: Access the Application
+## Step 5: Access the Application
 Open your web browser and go to http://localhost:3000 (or the port specified in your terminal). You should now be able to see and interact with the Parks & Rec application.
-
 
 # User Stories
 ## User Story 1: Outdoor Adventurer
