@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { signUp, logIn } from '../../../utils/backend';
-import searchVideo from '../../assets/search.mp4'; 
+// import searchVideo from '../../assets/search.mp4'; 
 
 export default function AuthFormPage({ setIsLoggedIn }) {
     const navigate = useNavigate();
@@ -44,7 +44,7 @@ export default function AuthFormPage({ setIsLoggedIn }) {
         <>
             <div className="relative h-screen overflow-auto"> 
                 <video autoPlay loop playsInline muted className="absolute w-full h-full object-cover">
-                    <source src={searchVideo} type="video/mp4" />
+                    <source src="https://drive.google.com/uc?export=download&id=1XSc5LUkQ_O6VDk9X_cpcvnsMR5-DIU8m" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4"> 
                     <div className="flex items-center justify-center h-[90vh]">
