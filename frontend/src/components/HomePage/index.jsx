@@ -1,6 +1,6 @@
 import React from 'react';
 import FooterSection from '../FooterSection'
-import homeVideo from '../../assets/video.mp4'; 
+// import homeVideo from '../../assets/video.mp4'; 
 
 export default function HomePage({ news }) {
     return (
@@ -8,7 +8,7 @@ export default function HomePage({ news }) {
         {/* Video */}
         <div className="relative overflow-hidden">
             <video autoPlay loop playsInline muted className="w-full" style={{ height: '90vh', objectFit: 'cover' }}>
-                <source src={homeVideo} type="video/mp4" />
+                <source src="https://drive.google.com/file/d/1OwaWpeFsWp2zNpUEF5gpkTewHSR7KYhJ/view?usp=drive_link" type="video/mp4" />
             </video>
             {/* Overlay content */}
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
