@@ -1,4 +1,4 @@
-![Untitled-1-03](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/d570ba9c-8ffd-493c-93eb-e89d63fb0b1b)![Untitled-1-02](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/daf33013-4892-415b-a90d-419788852ff0)![Untitled-1-05](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/17c88c05-e86b-4c63-a803-3d4cb42d3428)![github](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/7ce2f4e6-a273-4b93-8798-7fd68e77f32e)
+![Untitled-1-03](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/d570ba9c-8ffd-493c-93eb-e89d63fb0b1b)
 
 # Parks & Rec
 Parks & Rec is a MERN Stack CRUD application leveraging the National Park Service (NPS) API to present comprehensive information on US National Parks.
