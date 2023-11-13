@@ -75,12 +75,12 @@ The MVP of Parks & Rec will deliver a fully functional web application that:
 ![Untitled-1-05](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/b87fbdcd-1dc3-47e8-94ec-21801d0f190d)
 
 # Technologies Used
-MongoDB
-Express.js
-React
-Node.js
-National Park Service API
-Tailwind CSS
+* MongoDB
+* Express.js
+* React
+* Node.js
+* National Park Service API
+* Tailwind CSS
 
 # Stretch Goals
 ## Secure Login:
