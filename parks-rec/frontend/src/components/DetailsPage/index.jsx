@@ -30,7 +30,7 @@ export default function Details({
   // Initialize map URL with default value
   let mapUrl = "https://maps.google.com/maps?q=Earth&z=3&output=embed";
 
-  // Check if addresses array exists and has at least one address
+  // Check if address array exists and has at least one address
   if (addresses.length > 0) {
     // Save the full address string to variable
     const fullAddress = `${addresses[0].line1}, ${addresses[0].city}, ${addresses[0].stateCode}, ${addresses[0].postalCode}`;
