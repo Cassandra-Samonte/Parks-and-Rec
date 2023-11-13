@@ -1,4 +1,4 @@
-![github](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/7ce2f4e6-a273-4b93-8798-7fd68e77f32e)
+![Untitled-1-03](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/d570ba9c-8ffd-493c-93eb-e89d63fb0b1b)![Untitled-1-02](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/daf33013-4892-415b-a90d-419788852ff0)![Untitled-1-05](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/17c88c05-e86b-4c63-a803-3d4cb42d3428)![github](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/7ce2f4e6-a273-4b93-8798-7fd68e77f32e)
 
 # Parks & Rec
 Parks & Rec is a MERN Stack CRUD application leveraging the National Park Service (NPS) API to present comprehensive information on US National Parks.
@@ -49,9 +49,11 @@ The MVP of Parks & Rec will deliver a fully functional web application that:
 - Includes a model that allows users to share their experiences, rate parks and trails, and provide tips for fellow visitors.
 
 # Deployed App
-<img width="1336" alt="app1" src="https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/0fdaf7be-27a4-40e9-8879-bbf6ce883c71">
-<img width="1336" alt="app2" src="https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/9f8be390-f313-4aa1-aa43-dfac51326490">
-<img width="1336" alt="app3" src="https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/443f4ee3-2cc7-4713-8958-270b7b4406a1">
+![Untitled-1-01](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/c6bb8705-da57-45a2-bd42-c76a335ff5ba)
+![Untitled-1-02](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/02ba9b14-227a-4a54-9924-c0765b14ab66)
+![Untitled-1](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/67494980-e700-4eed-b98b-7da058b9f8b1)
+![Untitled-1-03](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/b973bbea-6899-4eac-8a37-f5f14fa2ce48)
+![Untitled-1-05](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/b87fbdcd-1dc3-47e8-94ec-21801d0f190d)
 
 # Technologies Used
 MongoDB
