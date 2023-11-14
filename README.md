@@ -69,8 +69,8 @@ The MVP of Parks & Rec will deliver a fully functional web application that:
 
 # Deployed App
 ![Untitled-1-01](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/c6bb8705-da57-45a2-bd42-c76a335ff5ba)
-![Untitled-1-02](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/02ba9b14-227a-4a54-9924-c0765b14ab66)
 ![Untitled-1](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/67494980-e700-4eed-b98b-7da058b9f8b1)
+![Untitled-1-02](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/02ba9b14-227a-4a54-9924-c0765b14ab66)
 ![Untitled-1-03](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/b973bbea-6899-4eac-8a37-f5f14fa2ce48)
 ![Untitled-1-05](https://github.com/Cassandra-Samonte/Parks-and-Rec/assets/142133887/b87fbdcd-1dc3-47e8-94ec-21801d0f190d)
 
