@@ -13,25 +13,27 @@ export default function AuthFormPage({ setIsLoggedIn }) {
         password: "",
     });
 
-    // Declare variable 'actionText'
+    // 'actionText' variable changes based on formType
+    // formType obtained form URL using useParams hook 
     // If formType === login is true, actionText is set to Log In
     // If false actionText is set to Sign Up
     let actionText = formType === 'login' ? 'Log In' : 'Sign Up';
 
-    // Function handles changes in form inputs
+    // Function takes event as parameter - 
     const handleInputChange = (event) => {
         // Update formData state with new values as user types in the input fields
+        // spread operator keeps existing formData 
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
 
-    // Function handles form submission
+    // Function handles form submission - either login or signup user based on form type
     const handleSubmit = async (event) => {
-        // Prevent default form submission behavior
+        // Stop default form submission behavior to prevent the page from reloading
         event.preventDefault();
         // Store response from login/signup to variable 'response'
         let response;
         
-        // Check if the form is for login or signup and call the function
+        // Check the formType and call in either logIn or signUp with the formData
         if (formType === 'login') {
             // Call logIn function and pass formData for login
             response = await logIn(formData);
@@ -39,9 +41,10 @@ export default function AuthFormPage({ setIsLoggedIn }) {
             // Call signUp function and pass formData for signup
             response = await signUp(formData);
         }
+
         // Check if response includes a token
         if (response && response.token) {
-            // Save JWT token in localStorage
+            // Save token in localStorage
             localStorage.setItem('userToken', response.token);
             // Update login state using the setIsLoggedIn prop
             setIsLoggedIn(true);

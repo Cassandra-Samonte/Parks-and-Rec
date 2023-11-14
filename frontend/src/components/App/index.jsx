@@ -96,7 +96,7 @@ function App() {
             </Link>
 
           {/* Render the Sign Up/Login or Logout button based on isLoggedIn state */}
-            {/* Ternary conditional operator checks isLoggedIn state */}
+            {/* Ternary operator checks isLoggedIn state */}
             {/* Logical NOT operator inverts truthiness of isLoggedIn state */}
             {!isLoggedIn ? (
               <>
