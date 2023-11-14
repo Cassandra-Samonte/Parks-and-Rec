@@ -48,7 +48,7 @@ export default function AuthFormPage({ setIsLoggedIn }) {
             // Navigate to homepage after successful login/signup
             navigate('/');
         } else {
-            // Handle failure (e.g., display an error message)
+            // Handle failure display error message
             console.error('Login/Signup failed:', response);
         }
     };
