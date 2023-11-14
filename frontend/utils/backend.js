@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const authHeader = { headers: { 'Authorization': localStorage.getItem('userToken') } }
+// const authHeader = { headers: { 'Authorization': localStorage.getItem('userToken') } }
 
 export async function signUp(user) {
     const { data } = await axios.post('/api/users/signup', user)
@@ -18,16 +18,19 @@ export async function getReviews(parkId) {
 }
 
 export async function postReview(review) {
+    const authHeader = { headers: { 'Authorization': localStorage.getItem('userToken') } }
     const { data } = await axios.post('/api/reviews', review, authHeader)
     return data
 }
 
 export async function updateReview(review, id) {
+    const authHeader = { headers: { 'Authorization': localStorage.getItem('userToken') } }
     const { data } = await axios.put(`/api/reviews/${id}`, review, authHeader)
     return data
 }
 
 export async function deleteReview(id) {
+    const authHeader = { headers: { 'Authorization': localStorage.getItem('userToken') } }
     const { data } = await axios.delete(`/api/reviews/${id}`, authHeader)
     return data
 }

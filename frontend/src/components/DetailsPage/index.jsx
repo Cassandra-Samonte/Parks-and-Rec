@@ -6,7 +6,7 @@ export default function Details({
   images, fullName, description, weatherInfo, id, directionsInfo, operatingHours, addresses, contacts, entranceFees, entrancePasses
 }) {
 
-  // Declare variable 
+  // Declare variable for each element
   // Check if object has more than zero elements
   // If true, iterate over each element in the array
   // If false, execute after :

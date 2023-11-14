@@ -14,7 +14,7 @@ export default function AuthFormPage({ setIsLoggedIn }) {
     });
 
     // 'actionText' variable changes based on formType
-    // formType obtained form URL using useParams hook 
+    // formType obtained from URL using useParams hook 
     // If formType === login is true, actionText is set to Log In
     // If false actionText is set to Sign Up
     let actionText = formType === 'login' ? 'Log In' : 'Sign Up';
