@@ -37,7 +37,7 @@ function App() {
     // To filter only the news articles with images:
     const newsWithImages = data.filter(
       // check if image exists, if null - article will not be included
-      // if image exists, check if url exists - truthy is returned and article is included 
+      // if image exists and url exists include article 
       article => article.image && article.image.url 
     );
     // Update news state with filtered data
