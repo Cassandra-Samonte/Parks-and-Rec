@@ -6,7 +6,7 @@ Parks & Rec is a MERN Stack CRUD application leveraging the National Park Servic
 # Introduction
 The goal of Parks & Rec is to provide a centralized platform for outdoor enthusiasts, park visitors, and nature explorers. It aims to facilitate easy access to detailed information on national parks, recreational activities, and updates on park conditions and news.
 
-This application will serve as the capstone project showcasing proficiency in the MERN stack and integration with third-party APIs, demonstrating a robust full-stack development skill set.
+This application serves as my capstone project at General Assembly showcasing proficiency in the MERN stack and integration with third-party APIs, demonstrating a robust full-stack development skill set.
 
 # Installation Instructions
 To set up and run Parks & Rec locally on your machine, please follow these steps:
