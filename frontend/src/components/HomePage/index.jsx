@@ -21,9 +21,11 @@ export default function HomePage({ news }) {
         <div className="pt-6 px-20 pb-20">
             <h1 className="text-left font-semibold text-lg pt-8">Latest News</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+                {/* Map over news array to create individual news article elements */}
                 {news.slice(0, 8).map((article) => (
                     <div key={article.id} className="flex flex-col bg-white overflow-hidden shadow-lg">
                         <div className="w-full h-56 bg-white p-4 shadow-lg">
+                            {/* Logical OR operator sets alt text to 'News image' if altText does not exist */}
                             <img src={article.image.url} alt={article.image.altText || 'News image'} className="w-full h-full object-cover" />
                         </div>
                         <div className="p-4 flex-grow">

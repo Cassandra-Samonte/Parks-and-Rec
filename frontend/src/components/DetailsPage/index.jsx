@@ -5,6 +5,12 @@ import './styles.css';
 export default function Details({
   images, fullName, description, weatherInfo, id, directionsInfo, operatingHours, addresses, contacts, entranceFees, entrancePasses
 }) {
+
+  // Declare variable 
+  // Check if object has more than zero elements
+  // If true, iterate over each element in the array
+  // If false, execute after :
+
   let contactElements = contacts.phoneNumbers.length > 0 ? contacts.phoneNumbers.map((phone, index) => (
     <p key={index} className="text-gray-800">{phone.type}: {phone.phoneNumber}</p>
   )) : <p className="text-gray-500">No phone information available</p>;
@@ -34,7 +40,7 @@ export default function Details({
   if (addresses.length > 0) {
     // Save the full address string to variable
     const fullAddress = `${addresses[0].line1}, ${addresses[0].city}, ${addresses[0].stateCode}, ${addresses[0].postalCode}`;
-    // Use JavaScript function to encode full address to pass it through URL
+    // Use JavaScript function to encode full address and pass it through the mapURL
     const encodedAddress = encodeURIComponent(fullAddress);
     // Generate new map based on encoded address
     mapUrl = `https://maps.google.com/maps?q=${encodedAddress}&output=embed`;

@@ -5,34 +5,47 @@ import { signUp, logIn } from '../../../utils/backend';
 
 export default function AuthFormPage({ setIsLoggedIn }) {
     const navigate = useNavigate();
+    // retrieve 'formType' parameter from URL using useParams hook
     const { formType } = useParams();
+    // State for form data - initialize with empty email/password
     const [formData, setFormData] = useState({
         email: "",
         password: "",
     });
 
+    // Declare variable 'actionText'
+    // If formType === login is true, actionText is set to Log In
+    // If false actionText is set to Sign Up
     let actionText = formType === 'login' ? 'Log In' : 'Sign Up';
 
+    // Function handles changes in form inputs
     const handleInputChange = (event) => {
+        // Update formData state with new values as user types in the input fields
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
 
+    // Function handles form submission
     const handleSubmit = async (event) => {
+        // Prevent default form submission behavior
         event.preventDefault();
+        // Store response from login/signup to variable 'response'
         let response;
         
+        // Check if the form is for login or signup and call the function
         if (formType === 'login') {
+            // Call logIn function and pass formData for login
             response = await logIn(formData);
         } else {
+            // Call signUp function and pass formData for signup
             response = await signUp(formData);
         }
         // Check if response includes a token
         if (response && response.token) {
             // Save JWT token in localStorage
             localStorage.setItem('userToken', response.token);
-            // Update login state
+            // Update login state using the setIsLoggedIn prop
             setIsLoggedIn(true);
-            // Navigate to homepage
+            // Navigate to homepage after successful login/signup
             navigate('/');
         } else {
             // Handle failure (e.g., display an error message)

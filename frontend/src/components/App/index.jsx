@@ -12,13 +12,16 @@ function App() {
   const [parks, setParks] = useState([]);
   const [detailsData, setDetailsData] = useState({})
   const [news, setNews] = useState([]);  
+  // Initialize login status as false
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-// Getting PARK data from API
-  // Define an async function to query the API & JSONify the response  
+// Fetch PARK data from API
   async function getData(url) {
+    // Fetch request from URL 
       const res = await fetch(url)
+      // Extract 'data' from JSON response
       const { data } = await res.json()
+      // Update parks state with fetched data
       setParks(parks.concat(data))
   }
 
@@ -27,32 +30,40 @@ function App() {
       getData('https://developer.nps.gov/api/v1/parks?limit=50&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
   }, [])
 
-// Getting NEWS data from API
+// Fetch NEWS data from API
   async function getNewsData(url) {
     const res = await fetch(url);          
-    const { data } = await res.json();    
+    const { data } = await res.json();
+    // To filter only the news articles with images:
     const newsWithImages = data.filter(
+      // check if image exists, if null - article will not be included
+      // if image exists, check if url exists - truthy is returned and article is included 
       article => article.image && article.image.url 
     );
+    // Update news state with filtered data
     setNews(newsWithImages); 
   }
 
-    // Query the API on component mount, and get 50 Parks.
+    // Query the API on component mount, fetch news data
     useEffect(() => {
       getNewsData('https://developer.nps.gov/api/v1/newsreleases/?limit=50&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg')
     }, [])
 
     // Check for a user token when the app loads
     useEffect(() => {
+      // Retrieve user token from localStorage
       const token = localStorage.getItem('userToken');
       if (token) {
+        // Update login status if token exists
         setIsLoggedIn(true);
       }
     }, []);
 
     // handleLogout function clears token from localStorage and updates the isLoggedIn state
     const handleLogout = () => {
+      // remove token from localStorage
       localStorage.removeItem('userToken');
+      // update login status to 'logged out'
       setIsLoggedIn(false);
     };
 
@@ -84,7 +95,9 @@ function App() {
               </button>
             </Link>
 
-          {/* Render the Sign Up/Login or Logout button based on isLoggedIn */}
+          {/* Render the Sign Up/Login or Logout button based on isLoggedIn state */}
+            {/* Ternary conditional operator checks isLoggedIn state */}
+            {/* Logical NOT operator inverts truthiness of isLoggedIn state */}
             {!isLoggedIn ? (
               <>
                 {/* Show Sign Up only if not logged in */}

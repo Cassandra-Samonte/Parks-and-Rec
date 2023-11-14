@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 
 export default function Card({ parkData, updateDetails }) {
 
-    // Declare variable
+    // Declare variable firstImage
     let firstImage; 
-    //  Check if .images exists and if there is at least one image
+    //  Check if .images exists and if there is at least one image at index 0
     if (parkData.images && parkData.images[0]) {
         // If an image exists, assign the first image to <img> tag and display first image
         firstImage = <img 
