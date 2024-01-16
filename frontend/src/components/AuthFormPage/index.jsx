@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { signUp, logIn } from '../../../utils/backend';
-import searchVideo from '../../assets/search.mp4'; 
+// import searchVideo from '../../assets/search.mp4'; 
 
 export default function AuthFormPage({ setIsLoggedIn }) {
     const navigate = useNavigate();

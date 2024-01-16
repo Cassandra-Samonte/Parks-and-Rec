@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Gallery from "../Gallery"
-import searchVideo from '../../assets/search.mp4'; 
+// import searchVideo from '../../assets/search.mp4'; 
 
 
 export default function SearchPage(props) {

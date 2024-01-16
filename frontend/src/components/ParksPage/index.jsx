@@ -1,6 +1,6 @@
 import Gallery from '../Gallery'
 import FooterSection from '../FooterSection'
-import browseVideo from '../../assets/browse.mp4'; 
+// import browseVideo from '../../assets/browse.mp4'; 
 import './styles.css';
 
 
