@@ -26,12 +26,13 @@ export default function SearchPage(props) {
         getData(`https://developer.nps.gov/api/v1/parks?limit=50&start=0&api_key=UOdct2cZxW8G7nCXedCKcy7sofVSQiDbskbENcXg&q=${query}`, event.target.innerText)
     }
 
+    const videoUrl = 'https://parksrec.s3.us-west-1.amazonaws.com/search.mp4';
+
     return (
-            <>
+        <>
             <div className="relative h-screen overflow-auto"> 
-                <video autoPlay loop playsInline muted className="absolute w-full h-full object-cover">
-                    <source src={searchVideo} type="video/mp4" />
-                    {/* <source src="https://drive.google.com/uc?export=download&id=1XSc5LUkQ_O6VDk9X_cpcvnsMR5-DIU8m" type="video/mp4" /> */}
+                <video autoPlay loop playsInline muted className="w-full" style={{ height: '100vh', objectFit: 'cover' }}>
+                    <source src={videoUrl} type="video/mp4" />
                 </video>
 
                 {/* Overlay content */}
@@ -62,7 +63,7 @@ export default function SearchPage(props) {
                     />
                 </div>
             </div>
-            </>
+        </>
 
     )
 }

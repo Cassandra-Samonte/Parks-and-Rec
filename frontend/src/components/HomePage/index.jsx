@@ -1,16 +1,17 @@
 import React from 'react';
 import FooterSection from '../FooterSection'
-import homeVideo from '../../assets/video.mp4'; 
 
 export default function HomePage({ news }) {
+    const videoUrl = 'https://parksrec.s3.us-west-1.amazonaws.com/video.mp4';
+
     return (
       <>
         {/* Video */}
-        <div className="relative overflow-hidden">
+        <div>
             <video autoPlay loop playsInline muted className="w-full" style={{ height: '90vh', objectFit: 'cover' }}>
-                <source src={homeVideo} type="video/mp4" />
-                {/* <source src="https://drive.google.com/uc?export=download&id=1fj03ZjDtdz_7bFeNcLoaQzSiiyaxoYEG" type="video/mp4" /> */}
+                <source src={videoUrl} type="video/mp4" />
             </video>
+
             {/* Overlay content */}
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                 <h1 className="text-white text-4xl font-bold">Explore the Great Outdoors</h1>
